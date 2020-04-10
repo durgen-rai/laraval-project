@@ -43,7 +43,7 @@
             <b class="arrow"></b>
         </li>
 
-        <li class="">
+        <li {!! request()->is('admin/user*')?'class="active open"':'' !!}>
             <a href="#" class="dropdown-toggle">
                 <i class="menu-icon fa fa-user"></i>
                 <span class="menu-text">User Manage </span>
@@ -54,7 +54,7 @@
 
             <ul class="submenu">
 
-                <li class="{!! request()->is('admin/user')?'class="active"':'' !!}">
+                <li {!! request()->is('admin/user')?'class="active"':'' !!}>
                     <a href="{{route('admin.user')}}">
                         <i class="menu-icon fa fa-caret-right"></i>
                         List
@@ -62,8 +62,8 @@
 
                     <b class="arrow"></b>
                 </li>
-                <li class="">
-                    <a href="#">
+                <li {!! request()->is('admin/user/create')?'class="active"':'' !!}>
+                    <a href="{{route('admin.user.create')}}">
                         <i class="menu-icon fa fa-caret-right"></i>
                         Add
                     </a>
