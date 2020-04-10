@@ -22,9 +22,9 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password',100)->nullable();
             $table->string('full_name',100);
-            $table->string('contact_n0',100);
+            $table->string('contact_no',100);
             $table->string('address',100);
-            $table->boolean('status',1)->default(0);
+            $table->boolean('status')->default(0);
 
         });
     }
