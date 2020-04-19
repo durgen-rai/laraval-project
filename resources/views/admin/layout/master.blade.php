@@ -310,10 +310,13 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
-                                <i class="ace-icon fa fa-power-off"></i>
-                                Logout
+                            <a href="" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" class="dropdown-item">
+                                <i class="ace-icon fa fa-power-off"></i> Logout
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
                 </li>

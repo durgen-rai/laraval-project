@@ -1,8 +1,3 @@
-
-
-
-
-
     <div class="sidebar-shortcuts" id="sidebar-shortcuts">
         <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
             <button class="btn btn-success">
@@ -69,17 +64,45 @@
                     </a>
 
                     <b class="arrow"></b>
-                </li>#
-
-
-            </ul>
-        </li>
-        <b class="arrow"></b>
                 </li>
 
 
             </ul>
+
         </li>
+        <li {!! request()->is('admin/category*')?'class="active open"':'' !!}>
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-user"></i>
+                <span class="menu-text">Category Manage </span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+
+                <li {!! request()->is('admin/category')?'class="active"':'' !!}>
+                    <a href="{{route('admin.category')}}">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        List
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+                <li {!! request()->is('admin/category/create')?'class="active"':'' !!}>
+                    <a href="{{route('admin.category.create')}}">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        Add
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+
+
+            </ul>
+
+        </li>
+        <b class="arrow"></b>
 
 
     </ul><!-- /.nav-list -->
@@ -87,5 +110,3 @@
     <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
         <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
     </div>
-
-

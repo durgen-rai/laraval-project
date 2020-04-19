@@ -7,13 +7,13 @@
                 <ul class="breadcrumb">
                     <li>
                         <i class="ace-icon fa fa-home home-icon"></i>
-                        <a href="#">Home</a>
+                        <a href="{{route('admin.dashboard')}}">Home</a>
                     </li>
 
                     <li>
-                        <a href="#">Tables</a>
+                        <a href="{{ route('admin.user') }}">Add</a>
                     </li>
-                    <li class="active">Simple &amp; Dynamic</li>
+                    <li class="active">List</li>
                 </ul><!-- /.breadcrumb -->
 
                 <div class="nav-search" id="nav-search">
@@ -96,10 +96,10 @@
 
                 <div class="page-header">
                     <h1>
-                        Tables
+                        User Manager
                         <small>
                             <i class="ace-icon fa fa-angle-double-right"></i>
-                            Static &amp; Dynamic Tables
+                            Add Form
                         </small>
                     </h1>
                 </div><!-- /.page-header -->
@@ -109,7 +109,10 @@
                         <!-- PAGE CONTENT BEGINS -->
                         <div class="row">
                             <div class="col-xs-12">
-                               <p>Add Form</p>
+                                <form class="form-horizontal" role="form" method="post" action="{{route('admin.user')}}">
+                                    @csrf
+                                    @include('admin.user.form')
+                                </form>
                             </div><!-- /.span -->
                         </div><!-- /.row -->
 

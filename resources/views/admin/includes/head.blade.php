@@ -39,4 +39,5 @@
     <script src="{{asset('admin-panel/assets/js/html5shiv.min.js')}}"></script>
     <script src="{{asset('admin-panel/assets/js/respond.min.js')}}"></script>
     <![endif]-->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
