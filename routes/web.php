@@ -36,6 +36,13 @@ Route::group(['prefix'=>'admin/','as'=>'admin.','middleware'=>'auth'],function (
     Route::post('category/update/{id}',     ['as'=>'category.update',            'uses'=>'Admin\CategoryController@update']);
     Route::get('category/delete/{id}',      ['as'=>'category.delete',            'uses'=>'Admin\CategoryController@destroy']);
 
+    Route::get('news',                  ['as'=>'news',                   'uses'=>'Admin\NewsController@index']);
+    Route::get('news/create',           ['as'=>'news.create',            'uses'=>'Admin\NewsController@create']);
+    Route::post('News/store',           ['as'=>'news.store',             'uses'=>'Admin\NewsController@store']);
+    Route::get('news/edit/{id}',        ['as'=>'news.edit',              'uses'=>'Admin\NewsController@edit']);
+    Route::post('News/update/{id}',     ['as'=>'news.update',            'uses'=>'Admin\NewsController@update']);
+    Route::get('news/delete/{id}',      ['as'=>'news.delete',            'uses'=>'Admin\NewsController@destroy']);
+
 });
 
 Auth::routes();

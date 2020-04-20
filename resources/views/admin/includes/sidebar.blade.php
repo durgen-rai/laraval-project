@@ -102,7 +102,40 @@
             </ul>
 
         </li>
-        <b class="arrow"></b>
+
+        <li {!! request()->is('admin/news*')?'class="active open"':'' !!}>
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-user"></i>
+                <span class="menu-text">News Manage </span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+
+                <li {!! request()->is('admin/news')?'class="active"':'' !!}>
+                    <a href="{{route('admin.news')}}">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        List
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+                <li {!! request()->is('admin/news/create')?'class="active"':'' !!}>
+                    <a href="{{route('admin.news.create')}}">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        Add
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+
+
+            </ul>
+
+        </li>
+      <!--  <b class="arrow"></b> -->
 
 
     </ul><!-- /.nav-list -->

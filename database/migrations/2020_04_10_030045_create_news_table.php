@@ -20,7 +20,7 @@ class CreateNewsTable extends Migration
             $table->string('slug',100)->unique();
             $table->text('image')->nullable();
             $table->string('writer',100)->nullable();
-            $table->text('sort_des')->nullable();
+            $table->text('short_des')->nullable();
             $table->longText('detail_des');
             $table->dateTime('public_data');
             $table->boolean('status')->default(0);
