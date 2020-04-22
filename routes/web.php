@@ -26,7 +26,7 @@ Route::group(['prefix'=>'admin/','as'=>'admin.','middleware'=>'auth'],function (
     Route::get('user/create',           ['as'=>'user.create',            'uses'=>'Admin\UserController@create']);
     Route::post('user',                 ['as'=>'user',                   'uses'=>'Admin\UserController@store']);
     Route::get('user/edit/{id}',        ['as'=>'user.edit',              'uses'=>'Admin\UserController@edit']);
-    Route::post('user/update/{id}',     ['as'=>'user.update',            'uses'=>'Admin\UserController@update']);
+    Route::patch('user/update/{id}',     ['as'=>'user.update',            'uses'=>'Admin\UserController@update']);
     Route::get('user/delete/{id}',      ['as'=>'user.delete',            'uses'=>'Admin\UserController@destroy']);
 
     Route::get('category',                  ['as'=>'category',                   'uses'=>'Admin\CategoryController@index']);
@@ -42,6 +42,7 @@ Route::group(['prefix'=>'admin/','as'=>'admin.','middleware'=>'auth'],function (
     Route::get('news/edit/{id}',        ['as'=>'news.edit',              'uses'=>'Admin\NewsController@edit']);
     Route::post('News/update/{id}',     ['as'=>'news.update',            'uses'=>'Admin\NewsController@update']);
     Route::get('news/delete/{id}',      ['as'=>'news.delete',            'uses'=>'Admin\NewsController@destroy']);
+
 
 });
 

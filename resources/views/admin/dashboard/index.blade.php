@@ -1226,8 +1226,11 @@
     </div><!-- /.main-content -->
     @endsection
 @section('js')
+
     <!--[if lte IE 8] -->
     <script src="{{asset('admin-panel/assets/js/excanvas.min.js')}}"></script>
+
+
     <![endif]-->
     <script src="{{asset('admin-panel/assets/js/jquery-ui.custom.min.js')}}"></script>
     <script src="{{asset('admin-panel/assets/js/jquery.ui.touch-punch.min.js')}}"></script>

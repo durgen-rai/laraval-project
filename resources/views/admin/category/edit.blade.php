@@ -113,6 +113,7 @@
                                       action="{{route($base_route.'.update',$data['row']->id)}}"  enctype="multipart/form-data">
                                     @csrf
 
+
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label no-padding-right" for="title"> Title </label>
                                         <div class="col-sm-9">
@@ -166,6 +167,7 @@
 
                                         </div>
                                     </div>
+
                                     <div class="clearfix form-actions">
                                         <div class="col-md-offset-3 col-md-9">
                                             <button class="btn btn-info" type="submit">
@@ -195,6 +197,7 @@
     </div><!-- /.main-content -->
     @endsection
 @section('js')
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
     <script type="javascript">
         $(document).ready(function(){
@@ -205,7 +208,7 @@
 
                     },
 
-                   'image':{
+                    'image':{
                         required:true,
 
                     }
